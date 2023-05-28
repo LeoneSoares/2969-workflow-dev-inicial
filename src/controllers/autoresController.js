@@ -73,7 +73,7 @@ class AutoresController {
     const { params } = req;
     try{
       const listaLivros = await Autor.pegaLivrosPorAutor(params.id);
-      const autor = await Autor.pegarPeloId(params.Id)
+      const autor = await Autor.pegarPeloId(params.id)
       return res.status(200).json({autor, livros: listaLivros});
     }
     catch(err) {
