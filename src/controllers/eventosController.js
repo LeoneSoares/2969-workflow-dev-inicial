@@ -14,7 +14,7 @@ class EventosController{
                 return res.status(500).json(err.message);
             }
         }
-        else res.status(404).send();
+        else return res.status(404).send();
     }
 }
 
